@@ -26,9 +26,11 @@ def token_requiered(f):
 def crearUsuario():
     return usuarioServicioCrearUsuario()
 
+
 @usuario.route('/validar' , methods=['POST'] )
 def validarUsuario():
     return usuarioServicioValidarUsuario()
+
 
 @usuario.route('/login' , methods=['POST'] )
 def loginUsuario():
