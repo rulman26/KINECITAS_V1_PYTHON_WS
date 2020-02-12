@@ -29,7 +29,7 @@ def usuarioServicioCrearUsuario():
                 redirect = 'http://localhost/kinecitas/#/validar/' + code 
                 html_content='<strong>Validar <a target="_blank" href="'+ redirect+'">VALIDAR CORREO</a></strong>'
                 
-                responseMail=serverMail.sendMail('rulman26@gmail.com','Validar email',html_content)
+                responseMail=serverMail.sendMail(email,'Validar email',html_content)
                 print(responseMail)
                 query = """INSERT INTO tausuario 
                             VALUES(default,'%s','kinecitas','%s',1,'A','')

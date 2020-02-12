@@ -27,4 +27,20 @@ def token_requiered(f):
 def formDatosKinecita():
     return kinecitaServiceFormDatos()
 
+@kinecita.route('/crear' , methods=['POST'] )
+@token_requiered
+def crearKinecita():
+    return kinecitaServicioCrearKinecita()
+
+@kinecita.route('/ver/<int:id>' , methods=['GET'] )
+@token_requiered
+def verKinecita(id):
+    return kinecitaServicioVerKinecita(id)
+
+@kinecita.route('/modificar' , methods=['POST'] )
+@token_requiered
+def modificarKinecita():
+    return kinecitaServicioModificarKinecita()
+
+
 
